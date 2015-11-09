@@ -35,9 +35,6 @@ local function OnQuestShared(eventCode, questId)
 	DeclineSharedQuest(questId)
 	-- d("Quest automatically handled: \""..GetOfferedQuestShareInfo(questId).."\"")
 end
-function AHSQOnQuestSharedTest()
-	OnQuestShared(EVENT_QUEST_SHARED, 2610)
-end
 
 -- Event handler function for EVENT_PLAYER_ACTIVATED
 local function OnPlayerActivated(eventCode)
