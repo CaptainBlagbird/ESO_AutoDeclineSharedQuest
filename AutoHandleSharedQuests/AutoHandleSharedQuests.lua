@@ -32,7 +32,6 @@ local function OnQuestShared(eventCode, questId)
 	else
 		doAction[pve](questId)
 	end
-	DeclineSharedQuest(questId)
 	-- d("Quest automatically handled: \""..GetOfferedQuestShareInfo(questId).."\"")
 end
 
