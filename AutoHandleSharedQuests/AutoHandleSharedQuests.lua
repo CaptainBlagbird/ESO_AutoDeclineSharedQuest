@@ -16,9 +16,17 @@ AutoHandleSharedQuests.SavedVarsDefault = {
 
 -- Local variables
 local doAction = {
-	[GetString(SI_AHSQ_ACTION_NONE)] = function(questId) end,
-	[GetString(SI_AHSQ_ACTION_ACCEPT)] = AcceptSharedQuest,
-	[GetString(SI_AHSQ_ACTION_DECLINE)] = DeclineSharedQuest,
+	[GetString(SI_AHSQ_ACTION_NONE)] = function(questId)
+			-- Nothing
+		end,
+	[GetString(SI_AHSQ_ACTION_ACCEPT)] = function(questId)
+			AcceptSharedQuest(questId)
+			d(zo_strformat(GetString(SI_AHSQ_MSG_ACCEPTED), GetOfferedQuestShareInfo(questId)))
+		end,
+	[GetString(SI_AHSQ_ACTION_DECLINE)] = function(questId)
+			DeclineSharedQuest(questId)
+			d(zo_strformat(GetString(SI_AHSQ_MSG_DECLINED), GetOfferedQuestShareInfo(questId)))
+		end,
 }
 
 
@@ -32,7 +40,6 @@ local function OnQuestShared(eventCode, questId)
 	else
 		doAction[pve](questId)
 	end
-	-- d("Quest automatically handled: \""..GetOfferedQuestShareInfo(questId).."\"")
 end
 
 -- Event handler function for EVENT_PLAYER_ACTIVATED

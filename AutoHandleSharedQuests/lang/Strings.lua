@@ -17,6 +17,10 @@ local strings = {
 	
 	SI_AHSQ_TT_AVA         = "Action to do when player is in alliance vs. alliance area",
 	SI_AHSQ_TT_PVE         = "Action to do when player is in player vs. environment area",
+	
+	-- Other
+	SI_AHSQ_MSG_ACCEPTED   = "Quest automatically accepted: |cFFFFFF<<1>>|r",
+	SI_AHSQ_MSG_DECLINED   = "Quest automatically declined: |cFFFFFF<<1>>|r",
 }
 
 for key, value in pairs(strings) do
