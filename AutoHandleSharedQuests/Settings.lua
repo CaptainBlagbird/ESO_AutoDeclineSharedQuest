@@ -41,7 +41,7 @@ local optionsTable = {
 
 -- Wait until all addons are loaded
 local function OnPlayerActivated(eventCode)
-	EVENT_MANAGER:UnregisterForEvent(AddonName.."1_Settings", EVENT_PLAYER_ACTIVATED)
+	EVENT_MANAGER:UnregisterForEvent(AddonName.."_Settings", EVENT_PLAYER_ACTIVATED)
 	if LibStub ~= nil then
 		local LAM = LibStub("LibAddonMenu-2.0")
 		LAM:RegisterAddonPanel(AddonName.."_Options", panelData)
