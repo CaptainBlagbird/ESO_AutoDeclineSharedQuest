@@ -24,7 +24,7 @@ libs\LibAddonMenu-2.0\controls\iconpicker.lua
 
 ; Language
 lang/Strings.lua
-lang/$(language).lua
+lang/Strings-$(language).lua
 
 ; Main
 AutoHandleSharedQuests.lua
