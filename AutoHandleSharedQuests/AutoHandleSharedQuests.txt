@@ -1,7 +1,7 @@
 ## Title: Auto Handle Shared Quests |c555555v1.1|r
 ## Version: 1.1
 ## Author: |c70C0DECaptainBlagbird|r
-## APIVersion: 100022
+## APIVersion: 100025
 ## Description: Automatically accepts/declines quests that are shared by group members.
 ## SavedVariables: AutoHandleSharedQuests_SavedVars
 ## OptionalDependsOn: LibAddonMenu-2.0
