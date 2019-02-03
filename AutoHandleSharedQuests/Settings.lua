@@ -43,7 +43,7 @@ local optionsTable = {
 local function OnPlayerActivated(eventCode)
     EVENT_MANAGER:UnregisterForEvent(AddonName.."_Settings", EVENT_PLAYER_ACTIVATED)
     if LibStub ~= nil then
-        local LAM = LibStub("LibAddonMenu-2.0")
+        local LAM = LibStub("LibAddonMenu-2.0", false)
         LAM:RegisterAddonPanel(AddonName.."_Options", panelData)
         LAM:RegisterOptionControls(AddonName.."_Options", optionsTable)
     end
